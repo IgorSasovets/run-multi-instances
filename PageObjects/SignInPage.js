@@ -10,12 +10,12 @@ class SignInPage {
   }
 
   async navigateToRegistrationPage() {
-    await browser.wait(protractor.ExpectedConditions.visibilityOf(this.registerButton), 10000);
+    await browser.wait(protractor.ExpectedConditions.visibilityOf(this.registerButton), 20000);
     return this.registerButton.click();
   }
 
   async fillSignInData(userName, userPassword) {
-    await browser.wait(protractor.ExpectedConditions.visibilityOf(this.userNameField), 10000);
+    await browser.wait(protractor.ExpectedConditions.visibilityOf(this.userNameField), 20000);
     await this.userNameField.sendKeys(userName);
     await this.passwordField.sendKeys(userPassword);
     return this.signInButton.click();
